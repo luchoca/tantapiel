@@ -1,0 +1,90 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "site"
+    label: "Contenido del sitio"
+    files:
+      - name: "site"
+        label: "Tanta Piel"
+        file: "public/content/site.json"
+        format: "json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Imagen", name: "image", widget: "image" }
+              - { label: "Texto alternativo", name: "alt", widget: "string" }
+              - { label: "Texto superior", name: "eyebrow", widget: "string" }
+              - { label: "Ubicacion", name: "location", widget: "string" }
+          - label: "Introduccion"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "eyebrow", widget: "string" }
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Texto destacado", name: "emphasis", widget: "string" }
+              - { label: "Descripcion", name: "text", widget: "text" }
+              - { label: "Texto del enlace", name: "link", widget: "string" }
+          - label: "Imagen editorial"
+            name: "editorial"
+            widget: "object"
+            fields:
+              - { label: "Imagen", name: "image", widget: "image" }
+              - { label: "Texto alternativo", name: "alt", widget: "string" }
+          - label: "Tratamientos"
+            name: "treatments"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "eyebrow", widget: "string" }
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Texto destacado", name: "emphasis", widget: "string" }
+              - { label: "Descripcion", name: "text", widget: "text" }
+          - label: "El espacio"
+            name: "space"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "eyebrow", widget: "string" }
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Texto destacado", name: "emphasis", widget: "string" }
+              - { label: "Descripcion", name: "text", widget: "text" }
+              - { label: "Imagen", name: "image", widget: "image" }
+              - { label: "Texto alternativo", name: "alt", widget: "string" }
+          - label: "Lista de tratamientos"
+            name: "treatmentItems"
+            widget: "list"
+            fields:
+              - { label: "Numero", name: "number", widget: "string" }
+              - { label: "Nombre", name: "title", widget: "string" }
+              - { label: "Descripcion", name: "copy", widget: "text" }
+          - label: "Ubicacion"
+            name: "location"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "eyebrow", widget: "string" }
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Texto destacado", name: "emphasis", widget: "string" }
+              - { label: "Direccion", name: "address", widget: "string" }
+              - { label: "Horarios", name: "hours", widget: "string" }
+              - { label: "WhatsApp", name: "whatsapp", widget: "string" }
+          - label: "Contacto"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "eyebrow", widget: "string" }
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Descripcion", name: "text", widget: "text" }
+              - { label: "Direccion", name: "address", widget: "string" }
+          - label: "CTA final"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "eyebrow", widget: "string" }
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Texto destacado", name: "emphasis", widget: "string" }

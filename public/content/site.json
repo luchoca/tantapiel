@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "image": "https://images.unsplash.com/photo-1586220742613-b731f66f7743?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Detalle editorial de cuidado facial",
+    "eyebrow": "Cosmetología contemporánea",
+    "location": "Montevideo, Uruguay"
+  },
+  "intro": {
+    "eyebrow": "Tanta Piel / 01",
+    "title": "Cada piel tiene",
+    "emphasis": "su propio lenguaje.",
+    "text": "Escuchamos lo que tu piel expresa y creamos tratamientos que se adaptan a sus tiempos, sus necesidades y tu forma de habitarte.",
+    "link": "Conocé los tratamientos"
+  },
+  "editorial": {
+    "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=88",
+    "alt": "Detalle de una rutina de cuidado facial"
+  },
+  "treatments": {
+    "eyebrow": "Tratamientos / 02",
+    "title": "Lo que tu piel",
+    "emphasis": "necesita hoy.",
+    "text": "Rituales simples, precisos y honestos. Cada sesión comienza con una lectura atenta de tu piel."
+  },
+  "treatmentItems": [
+    { "number": "01", "title": "Limpieza profunda", "copy": "Una pausa para devolverle luz, suavidad y equilibrio a tu piel." },
+    { "number": "02", "title": "Hidratación consciente", "copy": "Activos y texturas elegidos para acompañar las necesidades reales de tu piel." },
+    { "number": "03", "title": "Renovación suave", "copy": "Un tratamiento progresivo para mejorar la textura sin perder naturalidad." },
+    { "number": "04", "title": "Ritual personalizado", "copy": "Un encuentro diseñado especialmente para vos, según lo que tu piel necesita hoy." }
+  ],
+  "space": {
+    "eyebrow": "El espacio / 03",
+    "title": "Un espacio",
+    "emphasis": "para vos.",
+    "text": "Un lugar pensado para que puedas bajar el ritmo, disfrutar el momento y dedicarle tiempo a tu piel.",
+    "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=2200&q=88",
+    "alt": "Gabinete de estética cálido y tranquilo"
+  },
+  "location": {
+    "eyebrow": "Encontranos / 04",
+    "title": "Hacé lugar",
+    "emphasis": "para vos.",
+    "address": "Av. España 2145, Montevideo (provisoria)",
+    "hours": "Lunes a viernes, con agenda previa",
+    "whatsapp": "+598 98 700 322"
+  },
+  "contact": {
+    "eyebrow": "Contacto / 05",
+    "title": "Hablemos.",
+    "text": "¿Tenés alguna consulta o querés encontrar el tratamiento ideal para tu piel? Escribinos.",
+    "address": "[A confirmar]"
+  },
+  "cta": {
+    "eyebrow": "Tanta Piel / 06",
+    "title": "Tu piel también",
+    "emphasis": "merece tiempo."
+  }
+}
