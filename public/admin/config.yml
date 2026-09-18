@@ -1,0 +1,98 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "site"
+    label: "Contenido del sitio"
+    editor:
+      preview: false
+    files:
+      - file: "public/content/site.json"
+        label: "Contenido principal"
+        name: "site"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Imagen", name: "image", widget: "image" }
+              - { label: "Alt", name: "alt", widget: "string" }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Ubicación", name: "location", widget: "string" }
+
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Énfasis", name: "emphasis", widget: "string" }
+              - { label: "Texto", name: "text", widget: "text" }
+              - { label: "Link", name: "link", widget: "string" }
+
+          - label: "Editorial"
+            name: "editorial"
+            widget: "object"
+            fields:
+              - { label: "Imagen", name: "image", widget: "image" }
+              - { label: "Alt", name: "alt", widget: "string" }
+
+          - label: "Tratamientos"
+            name: "treatments"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Énfasis", name: "emphasis", widget: "string" }
+              - { label: "Texto", name: "text", widget: "text" }
+
+          - label: "Tratamientos destacados"
+            name: "treatmentItems"
+            widget: "list"
+            fields:
+              - { label: "Número", name: "number", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Texto", name: "copy", widget: "text" }
+
+          - label: "Espacio"
+            name: "space"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Énfasis", name: "emphasis", widget: "string" }
+              - { label: "Texto", name: "text", widget: "text" }
+              - { label: "Imagen", name: "image", widget: "image" }
+              - { label: "Alt", name: "alt", widget: "string" }
+
+          - label: "Ubicación"
+            name: "location"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Énfasis", name: "emphasis", widget: "string" }
+              - { label: "Dirección", name: "address", widget: "string" }
+              - { label: "Horarios", name: "hours", widget: "string" }
+              - { label: "WhatsApp", name: "whatsapp", widget: "string" }
+
+          - label: "Contacto"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Texto", name: "text", widget: "text" }
+              - { label: "Dirección", name: "address", widget: "string" }
+
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Énfasis", name: "emphasis", widget: "string" }
