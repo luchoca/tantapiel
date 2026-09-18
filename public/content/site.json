@@ -16,8 +16,18 @@
     "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=88",
     "alt": "Detalle de una rutina de cuidado facial"
   },
+  "profile": {
+    "eyebrow": "Cosmetóloga / 02",
+    "title": "Conocé a",
+    "name": "Gior",
+    "text": "Gior es la cosmetóloga de Tanta Piel: acompaña a cada persona con un enfoque atento, cálido y personalizado para que cada tratamiento responda a la piel real de cada momento.",
+    "images": [
+      "/images/giorperfil.jpeg",
+      "/images/gio2perfil.jpeg"
+    ]
+  },
   "treatments": {
-    "eyebrow": "Tratamientos / 02",
+    "eyebrow": "Tratamientos / 03",
     "title": "Lo que tu piel",
     "emphasis": "necesita hoy.",
     "text": "Rituales simples, precisos y honestos. Cada sesión comienza con una lectura atenta de tu piel."

@@ -6,6 +6,8 @@ import './responsive.css';
 const hero = 'https://images.unsplash.com/photo-1586220742613-b731f66f7743?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 const room = 'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=2200&q=88';
 const detail = 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=88';
+const giorperfil = '/images/giorperfil.jpeg';
+const giorperfil2 = '/images/gio2perfil.jpeg';
 const whatsapp = 'https://api.whatsapp.com/send?phone=59898700322&text=Hola%2C%20quisiera%20consultar%20por%20un%20tratamiento%20en%20Tanta%20Piel.';
 // TODO: reemplazar por Instagram real.
 const instagram = 'https://www.instagram.com/';
@@ -16,9 +18,10 @@ const defaultContent = {
   hero: { image: hero, alt: 'Detalle editorial de cuidado facial', eyebrow: 'Cosmetología contemporánea', location: 'Montevideo, Uruguay' },
   intro: { eyebrow: 'Tanta Piel / 01', title: 'Cada piel tiene', emphasis: 'su propio lenguaje.', text: 'Escuchamos lo que tu piel expresa y creamos tratamientos que se adaptan a sus tiempos, sus necesidades y tu forma de habitarte.', link: 'Conocé los tratamientos' },
   editorial: { image: detail, alt: 'Detalle de una rutina de cuidado facial' },
-  treatments: { eyebrow: 'Tratamientos / 02', title: 'Lo que tu piel', emphasis: 'necesita hoy.', text: 'Rituales simples, precisos y honestos. Cada sesión comienza con una lectura atenta de tu piel.' },
-  space: { eyebrow: 'El espacio / 03', title: 'Un espacio', emphasis: 'para vos.', text: 'Un lugar pensado para que puedas bajar el ritmo, disfrutar el momento y dedicarle tiempo a tu piel.', image: room, alt: 'Gabinete de estética cálido y tranquilo' },
-  location: { eyebrow: 'Encontranos / 04', title: 'Hacé lugar', emphasis: 'para vos.', address: 'Av. España 2145, Montevideo (provisoria)', hours: 'Lunes a viernes, con agenda previa', whatsapp: '+598 98 700 322' },
+  profile: { eyebrow: 'Cosmetóloga / 02', title: 'Conocé a', name: 'Gior', text: 'Gior es la cosmetóloga de Tanta Piel: acompaña a cada persona con un enfoque atento, cálido y personalizado para que cada tratamiento responda a la piel real de cada momento.', images: [giorperfil, giorperfil2] },
+  treatments: { eyebrow: 'Tratamientos / 03', title: 'Lo que tu piel', emphasis: 'necesita hoy.', text: 'Rituales simples, precisos y honestos. Cada sesión comienza con una lectura atenta de tu piel.' },
+  space: { eyebrow: 'El espacio / 04', title: 'Un espacio', emphasis: 'para vos.', text: 'Un lugar pensado para que puedas bajar el ritmo, disfrutar el momento y dedicarle tiempo a tu piel.', image: room, alt: 'Gabinete de estética cálido y tranquilo' },
+  location: { eyebrow: 'Encontranos / 05', title: 'Hacé lugar', emphasis: 'para vos.', address: 'Av. España 2145, Montevideo (provisoria)', hours: 'Lunes a viernes, con agenda previa', whatsapp: '+598 98 700 322' },
   contact: { eyebrow: 'Contacto / 05', title: 'Hablemos.', text: '¿Tenés alguna consulta o querés encontrar el tratamiento ideal para tu piel? Escribinos.', address: '[A confirmar]' },
   cta: { eyebrow: 'Tanta Piel / 06', title: 'Tu piel también', emphasis: 'merece tiempo.' }
 };
@@ -84,6 +87,7 @@ function App(){
       <section className="hero" aria-label="Tanta Piel"><img src={content.hero.image} alt={content.hero.alt} /><div className="hero-caption"><span>{content.hero.eyebrow}</span><span>{content.hero.location}</span></div></section>
       <section id="about" className="intro section-pad reveal"><div className="eyebrow">{content.intro.eyebrow}</div><h1>{content.intro.title}<br/><em>{content.intro.emphasis}</em></h1><div className="intro-copy"><p>{content.intro.text}</p><button className="text-link" onClick={()=>go('treatments')}>{content.intro.link}</button></div></section>
       <section className="image-block reveal"><img src={content.editorial.image} alt={content.editorial.alt} /></section>
+      <section className="profile section-pad reveal"><div className="eyebrow">{content.profile.eyebrow}</div><div className="profile-grid"><div className="profile-copy"><h2>{content.profile.title}<br/><em>{content.profile.name}</em></h2><p>{content.profile.text}</p></div><div className="profile-photos">{(content.profile.images || [giorperfil, giorperfil2]).map((image, index) => <img key={index} src={image} alt={index === 0 ? 'Giorperfil, cosmetóloga de Tanta Piel' : 'Retrato de Giorperfil, cosmetóloga'} className="profile-photo" />)}</div></div></section>
       <section id="treatments" className="treatments section-pad reveal"><div className="eyebrow">{content.treatments.eyebrow}</div><div className="section-heading"><h2>{content.treatments.title}<br/><em>{content.treatments.emphasis}</em></h2><p>{content.treatments.text}</p></div><div className="treatment-list">{treatmentItems.map(({number, title, copy}) => <details className="treatment" key={number}><summary><span>{number}</span><h3>{title}</h3><b>+</b></summary><p>{copy}</p></details>)}</div></section>
       <section id="space" className="space section-pad reveal"><div className="space-copy"><div className="eyebrow">{content.space.eyebrow}</div><h2>{content.space.title}<br/><em>{content.space.emphasis}</em></h2><p>{content.space.text}</p></div><img src={content.space.image} alt={content.space.alt} /></section>
       <section id="location" className="location section-pad reveal"><div className="eyebrow">{content.location.eyebrow}</div><div className="location-grid"><h2>{content.location.title}<br/><em>{content.location.emphasis}</em></h2><div className="location-data"><p><strong>Dirección 1</strong><br/>{content.location.address}</p><p><strong>Dirección 2 (provisoria)</strong><br/>Ituzaingó 1280, Paysandú</p><p><strong>Horarios</strong><br/>{content.location.hours}</p><p><strong>WhatsApp</strong><br/>{content.location.whatsapp}</p><a className="text-link" style={{textDecoration:'none', borderBottom:'none'}} href="https://maps.google.com/?q=Montevideo,Uruguay" target="_blank" rel="noreferrer">Cómo llegar</a></div></div></section>
